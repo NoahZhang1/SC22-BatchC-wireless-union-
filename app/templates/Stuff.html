@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Edu+TAS+Beginner&family=Lora:wght@500&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/styles-product_spec.css" rel="stylesheet" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      <style>
+
+        #head {
+          color: white;
+          font-family: 'monospace', Courier New;
+          text-align: left;
+        }
+
+        nav {
+          font-family: 'monospace', Courier New;
+        }
+
+        body {
+          background: linear-gradient(175deg, Khaki, lightgreen);
+          font-family: 'monospace', Courier New;
+          font-size: 1.2em;
+        <!--  text-shadow: 18px 18px 1px #FFF; -->
+        }
+
+      </style>
+
+    </head>
+
+    <body id="page-top">
+<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('team') }}">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('shakespeare') }}">Try our Models</a>
+        </li>
+       <li class="nav-item">
+         <a class="nav-link" href="{{ url_for('Stuff') }}">Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.ai-camp.org/">AI Camp</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+        <!-- Masthead-->
+        <header class="masthead" style="background-image: url({{ url_for('static', filename= 'images/background.png') }}); background-size: cover;" data-image-width="1280" data-image-height="913">
+            <div class="container" id="head">
+                <div class="masthead-heading text-uppercase">Lorem Ipsum Generator</div>
+                <div id="custom" class="masthead-subheading">Your Personal Writing Assistant</div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Product Specs</h2>
+                    <h3 class="section-subheading text-muted">Wireless Union</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/about/Gramformer(circle).jpg" alt="..." /></div>
+                        <div class="timeline-panel"s>
+                            <div class="timeline-heading">
+                                <h4 class="subheading">The Project</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">The Lorem Ipsum bot is a text generation bot that acts as a writing assistant for the user. The user will be able to select from a drop-down of different scenarios and the bot will auto-fill certain sentences based on the scenario given. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/about/mars.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">The Dataset</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">We split up into three different subgroups to work on training three different models: Human Conversation, Customer Support, and Academics. For the Human Conversation they used various datasets to train their model. To train the model for human conversation they used multiple human conversation datasets from Kaggle. For the Customer Support they used a dataset from Kaggle based on over twenty thousand possible questions and responses that any customer may ask. The Academic Team used a question and answer dataset between a student and a teacher, and a dataset that included over 7,000 research papers on neural networks.
+</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/about/jupiter.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">The Model</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">We are using GPT-2-based AI text generation to autofill sentences. We imported these packages into our code and use them to accomplish our goal. We made use of several datasets that can be found online on websites like Kaggle and Huggingface. These datasets have accurate and diverse data for us to use to train our models. Moreover, we made use of python’s transformers package as well as a style former package we found on GitHub. Each team used the pandas library in python to edit their data, and we used bootstrap to help create our website.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/about/realsaturn.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Use Cases and Expansions</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation apps, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in. </p></div>
+                        </div>
+                    </li>
+                                      <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/about/neptune.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Challenges Faced</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted"> We had some challenges along the way. Training the AI model took a very long time due to webpage issues and large dataset files, this slowed us down a decent amount. We also had some issues with Google Colaboratory, such as us having to reload the files and code blocks every time that we would reopen the project.
+</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                          <img class="rounded-circle img-fluid" src="static/images/about/earth.jpg" alt="..." />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Team-->
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/scripts-product_spec.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
+  <strong></strong><strong></strong>

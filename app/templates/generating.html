@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>YO, dis da model</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Edu+TAS+Beginner&family=Lora:wght@500&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='/styles-shakespeare.css') }}">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
+      
+      <style>
+        <!-- add new styles to the website -->
+
+
+        nav {
+          font-family: 'monospace', Courier New;
+        }
+        
+            body {
+      font-family: 'Dosis', sans-serif;
+          font-size: 1.2em;
+    }
+                #gen {
+          font-family: 'Edu TAS Beginner', cursive;
+          font-size: 1.2em;
+        }
+                #head {
+          text-shadow: 0px 0px 10px #000;
+          font-family: 'Lora', serif;
+        }
+      </style>
+      
+    </head>
+    <body>
+      
+ <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('team') }}">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('shakespeare') }}">Our Models</a>
+        </li>
+    <!--    <li class="nav-item">
+       <a class="nav-link" href="{{ url_for('poe') }}">Try Poe Model</a>
+        </li> -->
+                <li class="nav-item">
+          <a class="nav-link" href="https://www.ai-camp.org/">AI Camp</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+        <!-- Masthead-->
+        <header class="masthead" style="background-image: url({{ url_for('static', filename= 'images/WackBackgroundPicture.png') }}); background-size: cover;" data-image-width="1280" data-image-height="913">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <h1 id="head" class="mb-5">Generate different types of text based on any keyword</h1>
+                            <!-- Signup form-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * SB Forms Contact Form * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- This form is pre-integrated with SB Forms.-->
+                            <!-- To make this form functional, sign up at-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- to get an API token!-->
+                            <form action="{{url_for('generate_text')}}" method="POST" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                              <select class="form-control-lg" rows="4" cols="50" placeholder="genre type" required="" id="text_gen_input_1" name="genre" >
+
+                          <option value= "customer_support">--select genre--</option>
+                          <option value="customer_support">I am trying to get help as customer</option>
+                          <option value="daily_conversation">I am writing to my acquaintance</option>
+                          <option value="academic">I am writing in an academic environment</option>
+
+                        </select>
+                                <!-- Email address input-->
+                                <div class="row">
+                                    <div class="col">
+                                        <input name="prompt" class="form-control form-control-lg" placeholder="Enter your prompt">
+                                    </div>
+                                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Generation-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+
+                            <h3>AI-Generation</h3>
+                         <br>
+                          <p id="gen" class="lead mb-0">
+                        {{ generated }}
+                        </p>
+                        </div>
+                    </div>
+              </div>
+
+              
+              
+             <form action="{{url_for('grammar_fix')}}" method="POST" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <div class="vertical-center">
+                                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Grammar Fix</button></div>
+                                </div>
+                            </form>
+              <h1>
+                &nbsp;
+              </h1>
+              <form action="{{url_for('summarization')}}" method="POST" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <div class="vertical-center">
+                                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Summarize</button></div>
+                                </div>
+                            </form>
+              <h1>
+                &nbsp;
+              </h1>
+              <form action="{{url_for('styletransfer')}}" method="POST" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <div class="vertical-center">
+                                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Change Style</button></div>
+                                </div>
+                            </form>
+              
+              
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                            <h3>Highly Trained</h3>
+                            <p class="lead mb-0">Our model has been trained for... (we will add this later)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                            <h3>Accurate</h3>
+                            <p class="lead mb-0">Your keyword will be used to generate an accurate statement that is related to your prompt.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Unique Generations</h3>
+                            <p class="lead mb-0">All generations should be unique in some way and will change based on the keyword inputted!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Showcases-->
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url({{ url_for('static', filename='images/Shakespeare.jpg') }});" ></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Customer Support</h2>
+                        <p class="lead mb-0">This text generator can help customers by giving them similar results on the keyword that is inputted. </p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url({{ url_for('static', filename='images/Poe.jpg') }});"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Conversation generator</h2>
+                        <p class="lead mb-0">This text generator can output realistic snippets of human conversation based on your specific keyword. </p>
+                    </div>
+                </div>
+              <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url({{ url_for('static', filename='images/Shakespeare.jpg') }});" ></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Text Rephraser</h2>
+                        <p class="lead mb-0">This text generator can turn your casual sentences into formal sentences that is ready to use in emails or other messaging platforms. </p>
+                    </div>
+                </div>
+             
+                
+
+            </div>
+        </section>
+        
+        
+        <!-- Footer-->
+        <footer class="footer bg-light">
+            
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html><pre></pre>

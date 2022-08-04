@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=
+    "viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>
+      Yo, dis da homepage
+    </title><!-- Favicon-->
+    <link href="assets/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- Font Awesome icons (free version)-->
+
+    <script crossorigin="anonymous" src=
+    "https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script><!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    rel="stylesheet" type="text/css">
+    <link href=
+    "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel=
+    "stylesheet" type="text/css">
+    <link href=
+    "https://fonts.googleapis.com/css2?family=Dosis&amp;family=Edu+TAS+Beginner&amp;family=Lora:wght@500&amp;display=swap"
+    rel="stylesheet"><!-- Core theme CSS (includes Bootstrap)-->
+    <link href="static/styles-product_spec.css" rel="stylesheet">
+    <link href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    rel="stylesheet">
+    <link href=
+    "https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel=
+    "stylesheet">
+    <style>
+
+        #head {
+          color: white;
+          font-family: 'monospace', Courier New;
+          text-align: left;
+        }
+
+        nav {
+          font-family: 'monospace', Courier New;
+        }
+
+        body {
+          background: linear-gradient(90deg, #F1F2E5, khaki);
+          font-family: 'monospace', Courier New;
+          font-size: 1.2em;
+        <!--  text-shadow: 18px 18px 1px #FFF; -->
+        }
+
+    </style>
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" class="navbar-toggler" data-bs-target=
+        "#navbarSupportedContent" data-bs-toggle="collapse" type=
+        "button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('home')}}">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('team')}}">Team</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('shakespeare') }}">Try
+              our Models</a>
+            </li>
+
+            <li class="nav-item">
+              <!--      <a class="nav-link" href="{{ url_for('poe') }}">Information</a>
+        </li> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.ai-camp.org/">AI Camp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+
+    <header class="masthead" data-image-height="913" data-image-width="1280"
+    style=
+    "background-image: url({{ url_for('static', filename= 'images/background.jpg') }}); background-size: cover;">
+      <div class="container" id="head">
+        <div class="masthead-heading text-uppercase" style="color:White;">
+          Lorem Ipsum Generator
+        </div>
+
+        <div class="masthead-subheading" id="custom">
+          Your Personal Writing Assistant
+        </div>
+        <div class="masthead-subheading" id="custom">
+          Team Wireless Union
+        </div>
+      </div>
+    </header>
+    <!-- About-->
+
+    <section class="page-section" id="about">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">
+            Presenation Content
+          </h2>
+
+          <h3 class="section-subheading text-muted">
+            Wireless Union
+          </h3>
+        </div>
+
+        <ul class="timeline">
+          <li>
+            <div class="timeline-image">
+              <img alt="..." class="rounded-circle img-fluid" src=
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1024px-Icon-round-Question_mark.svg.png"
+                   >
+            </div>
+
+            <div class="timeline-panel" s="">
+              <div class="timeline-heading">
+                <h4 class="subheading" style="font-weight: bold">
+                  HOW TO USE? (Ryan)
+                </h4>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+<!--                   The Lorem Ipsum bot is a text generation bot that acts as a
+                  writing assistant for the user. The user will be able to
+                  select from a drop-down of different scenarios and the bot
+                  will auto-fill certain sentences based on the scenario given. -->
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img alt="..." class="rounded-circle img-fluid" src=
+              "https://icon-library.com/images/tech-icon/tech-icon-2.jpg">
+            </div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading" style="font-weight: bold">
+                  TECHNICAL STACK (Andrew)
+                </h4>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+<!--                   We split up into three different subgroups to work on
+                  training three different models: Human Conversation, Customer
+                  Support, and Academics. For the Human Conversation they used
+                  various datasets to train their model. To train the model for
+                  human conversation they used multiple human conversation
+                  datasets from Kaggle. For the Customer Support they used a
+                  dataset from Kaggle based on over twenty thousand possible
+                  questions and responses that any customer may ask. The
+                  Academic Team used a question and answer dataset between a
+                  student and a teacher, and a dataset that included over 7,000
+                  research papers on neural networks. -->
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-image">
+              <img alt="..." class="rounded-circle img-fluid" src=
+              "https://cdn-icons-png.flaticon.com/512/603/603156.png">
+            </div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading" style="font-weight: bold">
+                  DATASET EXPLANATION (Chinmay)
+                </h4>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+<!--                   We are using a GPT-2-based AI text generation model to
+                  generate texts. We are also using other summarization and grammar correction models we                     found on the internet along with several datasets that we found online on websites like                     Kaggle and Huggingface. These datasets have accurate and diverse data for us to use to                     train our models. Moreover, we made use of python’s transformers package as well as a                       style former package we found on GitHub. Each team used the pandas library in python to                     edit their data, and we used bootstrap to help create our website. -->
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img alt="..." class="rounded-circle img-fluid" src=
+              "https://icons-for-free.com/download-icon-briefcase+business+case+job+portfolio+suitcase+icon-1320184126932299883_512.png">
+            </div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading" style="font-weight: bold">
+                  USE CASES AND EXPANSION (Aliya)
+                </h4>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+<!--                   This text generation project can be used in an assortment of
+                  problems, such as conversations. You can use this in any
+                  conversation apps, it can generate commonly used text to
+                  complete your sentence. It also has a grammar corrector built
+                  in. -->
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-image">
+              <img alt="..." class="rounded-circle img-fluid" src=
+              "https://icon-library.com/images/challenge-icon-png/challenge-icon-png-3.jpg">
+            </div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading" style="font-weight: bold">
+                  CHALLENGES (Kanishk)
+                </h4>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+<!--                   We had some challenges along the way. Finding datasets was one of the first issues that we ran    into. There weren't many datasets that matched what we were looking for. Preprocessing the data was also a challenge. Almost all of the datasets we found were formatted unorthodox ways. Another challenge was training the AI model. This
+                  took a very long time due to webpage issues and large dataset
+                  files, this slowed us down a decent amount. We also had some
+                  issues with Google Colaboratory, such as us having to reload
+                  the files and code blocks every time we reopened the
+                  project. -->
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img alt="..." class="rounded-circle img-fluid" src=
+              "https://cdn-icons-png.flaticon.com/512/5038/5038590.png">
+              <h4 class="subheading" style="color:Tomato; font-size: 2em;">
+                  DEMO! (Will)
+                </h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Team-->
+
+    <section class="content-section text-light text-center" id="themodel"
+    style="background: linear-gradient(to bottom, #8BA583, #CDA59E">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-light mb-0" style="font-weight: bold">
+            HOW TO USE?
+          </h3>
+          <br>
+          <br>
+          <br>
+          <img class="img-fluid" src=
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1024px-Icon-round-Question_mark.svg.png"
+                 height = "300"
+                 width = "300"
+                 >
+          <br>
+          <br>
+          <br>
+          <p class="text-dark mb-0" style="color:White; font-weight: bold">
+              The Lorem Ipsum bot is a text generation bot that acts as a writing assistant for the user. The user will be able to select from a drop-down of different scenarios and the bot will auto-fill certain sentences based on the scenario given
+            </p>
+        </div>
+
+        <div class="row gx-4 gx-lg-5">
+          <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->
+
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <!-- this is the image we had before: img class="img-fluid" src="{{ url_for('static',filename='img/model_detail (3).png') }}" alt="..." /-->
+
+
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+<!--           <div class=center style= "border -spacing: 15px 50px">
+            <h4>
+              <strong>Use Cases and Expansions</strong>
+            </h4>
+
+            <p class="text-dark mb-0">
+              This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation app, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in.
+            </p>
+          </div> -->
+
+          <br>
+          <br>
+          <br>
+
+          <div class=center> <!-- "col-md-6 mb-5 mb-lg-0" -->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section text-light text-center" id="themodel"
+    style="background: linear-gradient(to bottom, #91B822, #FFE76F">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-light mb-0" style="font-weight: bold">
+            TECHNOLOGY STACK
+          </h3>
+          <br>
+          <br>
+          <br>
+          <img class="img-fluid" src=
+            "https://icon-library.com/images/tech-icon/tech-icon-2.jpg"
+                 height = "300"
+                 width = "300"
+                 >
+          <br>
+          <br>
+          <br>
+         <p class="text-dark mb-0" style="font-weight: bold">
+              We used a GPT-2 aitextgen model for headline generation. All models were
+              trained by finetuning the 124M pre-trained language model. We also used other models for text summarization and grammar correction.
+            </p>
+        </div>
+
+        <div class="row gx-4 gx-lg-5">
+          <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->
+
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <!-- this is the image we had before: img class="img-fluid" src="{{ url_for('static',filename='img/model_detail (3).png') }}" alt="..." /-->
+
+
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+<!--           <div class=center style= "border -spacing: 15px 50px">
+            <h4>
+              <strong>Use Cases and Expansions</strong>
+            </h4>
+
+            <p class="text-dark mb-0">
+              This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation app, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in.
+            </p>
+          </div> -->
+
+          <br>
+          <br>
+          <br>
+
+          <div class=center> <!-- "col-md-6 mb-5 mb-lg-0" -->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section text-light text-center" id="themodel"
+    style="background: linear-gradient(to bottom, #ad8d32, #d6ca9c">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-light mb-0" style="font-weight: bold">
+            DATASET
+          </h3>
+          <br>
+          <br>
+          <br>
+          <img class="img-fluid" src=
+            "https://cdn-icons-png.flaticon.com/512/603/603156.png"
+                 height = "300"
+                 width = "300"
+                 >
+          <br>
+          <br>
+          <br>
+         <p class="text-dark mb-0" style="font-weight: bold">
+              We split up into three different subgroups to work on training three different models: Human Conversation, Customer Support, and Academic Conversation. Each of these groups trained similar models with different online datasets
+            </p>
+        </div>
+
+        <div class="row gx-4 gx-lg-5">
+          <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->
+
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <!-- this is the image we had before: img class="img-fluid" src="{{ url_for('static',filename='img/model_detail (3).png') }}" alt="..." /-->
+
+
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+<!--           <div class=center style= "border -spacing: 15px 50px">
+            <h4>
+              <strong>Use Cases and Expansions</strong>
+            </h4>
+
+            <p class="text-dark mb-0">
+              This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation app, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in.
+            </p>
+          </div> -->
+
+          <br>
+          <br>
+          <br>
+
+          <div class=center> <!-- "col-md-6 mb-5 mb-lg-0" -->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section text-light text-center" id="themodel"
+    style="background: linear-gradient(to bottom, #901822, #E103F2">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-light mb-0" style="font-weight: bold">
+            USE CASES AND EXPANSION
+          </h3>
+          <br>
+          <br>
+          <br>
+          <img class="img-fluid" src=
+            "https://icons-for-free.com/download-icon-briefcase+business+case+job+portfolio+suitcase+icon-1320184126932299883_512.png"
+                 height = "300"
+                 width = "300"
+                 >
+          <br>
+          <br>
+          <br>
+         <p class="text-dark mb-0" style="font-weight: bold">
+              This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation apps, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in.
+            </p>
+        </div>
+
+        <div class="row gx-4 gx-lg-5">
+          <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->
+
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <!-- this is the image we had before: img class="img-fluid" src="{{ url_for('static',filename='img/model_detail (3).png') }}" alt="..." /-->
+
+
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+<!--           <div class=center style= "border -spacing: 15px 50px">
+            <h4>
+              <strong>Use Cases and Expansions</strong>
+            </h4>
+
+            <p class="text-dark mb-0">
+              This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation app, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in.
+            </p>
+          </div> -->
+
+          <br>
+          <br>
+          <br>
+
+          <div class=center> <!-- "col-md-6 mb-5 mb-lg-0" -->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section text-light text-center" id="themodel"
+    style="background: linear-gradient(to bottom, #E7FFA6, #192312">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-light mb-0" style="font-weight: bold">
+            CHALLENGES WE FACED
+          </h3>
+          <br>
+          <br>
+          <br>
+          <img class="img-fluid" src=
+            "https://icon-library.com/images/challenge-icon-png/challenge-icon-png-3.jpg"
+                 height = "300"
+                 width = "300"
+                 >
+          <br>
+          <br>
+          <br>
+         <p class="text-dark mb-0" style="font-weight: bold">
+               We had some challenges along the way. Finding datasets was one of the first issues that we ran    into. There weren't many datasets that matched what we were looking for. Preprocessing the data was also a challenge. Almost all of the datasets we found were formatted unorthodox ways. Another challenge was training the AI model. This
+                  took a very long time due to webpage issues and large dataset
+                  files, this slowed us down a decent amount. We also had some
+                  issues with Google Colaboratory, such as us having to reload
+                  the files and code blocks every time we reopened the
+                  project.
+            </p>
+        </div>
+
+        <div class="row gx-4 gx-lg-5">
+          <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->
+
+          <div class="col-md-6 mb-5 mb-lg-0">
+            <!-- this is the image we had before: img class="img-fluid" src="{{ url_for('static',filename='img/model_detail (3).png') }}" alt="..." /-->
+
+
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+<!--           <div class=center style= "border -spacing: 15px 50px">
+            <h4>
+              <strong>Use Cases and Expansions</strong>
+            </h4>
+
+            <p class="text-dark mb-0">
+              This text generation project can be used in an assortment of problems, such as conversations. You can use this in any conversation app, it can generate commonly used text to complete your sentence. It also has a grammar corrector built in.
+            </p>
+          </div> -->
+
+          <br>
+          <br>
+          <br>
+
+          <div class=center> <!-- "col-md-6 mb-5 mb-lg-0" -->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <!-- Bootstrap core JS-->
+    <script src=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+
+    <script src="static/scripts-product_spec.js"></script> 
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+
+    <!-- * *                               SB Forms JS                               * *-->
+
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+
+    <script src=
+    "https://cdn.startbootstrap.com/sb-forms-latest.js"></script><strong></strong><strong></strong>
+  </body>
+</html>
